@@ -16,7 +16,7 @@ function App() {
         <thead>
           <tr>
             <th>foto</th>
-            <th>nome</th>
+            <th>Nome</th>
             <th>cargo</th>
             <th>data de admissão</th>
             <th>telefone</th>
