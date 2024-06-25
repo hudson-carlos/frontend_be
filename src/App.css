@@ -1,39 +1,154 @@
 .App {
+  background: #F0F0F0;
   width: 100%;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search {
+  width: 90%;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+input {
+  border: none;
+  outline: none;
+  background: #FFFFFF;
+  height: 44px;
+  width: 250px;
+}
+
+.search div img {
+  background: #FFFFFF;
+  height: 24px;
+  width: 24px;
+}
+  
+.container {
+  padding: 0 1rem 0 1rem;
+  background: #FFFFFF;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 46px;
+  border-radius: 8px 8px 8px 8px;
+  border: solid 1px #DFDFDF;
+  outline: none;
 }
+
+.outlined {
+  outline: solid 1px black;
+  
+}
+
+h1 {
+  color: #1C1C1C;
+}
+
 
 table {
   width: 90%;
+  background: #FFFFFF;
   border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  font-family: 'roboto';
 }
 
-thead th {
+table th:first-child, td:first-child {
+  padding-left: 2rem;
+}
+
+th, td {
+  width: calc(100% / 5);
+  text-align: start;
+  height: 50px;
+}
+
+
+thead {
   text-transform: uppercase;
   height: 47px;
   background: linear-gradient(#5A84C0, #594ED2);
-  color: black;
+  color: white;
 }
 
-thead th:first-child {
-  border-top-left-radius: 10px;
-}
-thead th:last-child {
-  border-top-right-radius: 10px; 
-}
-
-tbody td {
-  text-align: center;
-  height: 49px;
+tbody tr {
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  color: #1C1C1C;
 }
 
 td img {
-  display: block;
   margin: 0 auto;
-  max-width: 50px;
+  width: 34px;
   height: auto;
   border-radius: 50%;
   overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background: #FFFFFF;
+  padding-left: 8rem;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.data-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .search {
+    width: 90%;
+    margin-bottom: 1rem;
+    display: flex; 
+    flex-direction: column;
+    align-items: start; 
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  header {
+    padding-left: 2rem;
+  }
+
+  .ellipse {
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 0 auto;
+    background: #FFFFFF;
+  }
+
+  th, td {
+    text-align: center;
+    width: calc(100% / 3);
+  }
+
+  .mobile-off {
+    display: none;
+  }
+
+  .mobile-only {
+    display: table-cell;
+  }
+  
+  .data-mobile {
+    border: solid 1px black;
+    display: none;
+  }
 }

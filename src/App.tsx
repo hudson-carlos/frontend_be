@@ -1,37 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import api from './api';
-import { erro, employees } from './types';
+import React from 'react';
+import Table from './components/table';
+import Search from './components/search';
+import Header from './components/header';
 import './App.css';
 
-function App() {
-  const [data, setData] = useState<employees[] | erro[] | any[]>([]);
-
-  useEffect(() => {
-    api().then((res) => { setData(res) });
-  }, []);
-  
+function App() { 
   return (
     <div className="App">
-      <table>
-        <thead>
-          <tr>
-            <th>foto</th>
-            <th>Nome</th>
-            <th>cargo</th>
-            <th>data de admissão</th>
-            <th>telefone</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map(({name, image, admission_date, job, phone}, index) => <tr key={index}>
-            <td><img src={image} alt={name} /></td>
-            <td>{name}</td>
-            <td>{job}</td>
-            <td>{admission_date}</td>
-            <td>{phone}</td>
-          </tr>)}
-        </tbody>
-      </table>
+      <Header />
+      <Search />
+      <Table />
     </div>
   );
 }
