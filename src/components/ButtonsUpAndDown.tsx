@@ -1,25 +1,36 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import down from "../icons/charm_chevron-down.png";
 import up from "../icons/charm_chevron-up.png";
+import { MyContext } from "../context/contextProvider";
 
+interface props {
+  indexTable: number
+}
 
-export default () => {
+export default ({indexTable}: props) => {
   const [visibleButton, setVisibleButton] = useState<boolean>(true);
+  const { setNamesButton } = useContext(MyContext);
+
   if (visibleButton) return (
-    <img
-      className="down" 
+    <img 
       src={down} 
       alt="botton down"
-      onClick={() => setVisibleButton(false)}
-        
+      onClick={() => {
+        setNamesButton((oldValue) => [...oldValue, `down${indexTable}`]);
+        setVisibleButton(false);
+      }} 
     />
   );
   return (
-    <img
-      className="down" 
-      src={up} 
-      alt="botton up"
-      onClick={() => setVisibleButton(true)} 
-    />
+    <td>
+      <img
+        src={up} 
+        alt="botton up"
+        onClick={() => {
+          setVisibleButton(true);
+          setNamesButton((oldValue) => oldValue.filter(name => name !== `down${indexTable}`));
+        }} 
+      />
+    </td>
   );
 }

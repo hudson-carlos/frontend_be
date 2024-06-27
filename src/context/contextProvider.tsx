@@ -1,25 +1,22 @@
 import { FC, createContext, useState } from "react";
-import { typeDefaultValue, indexAndButton, contextProps } from "../types";
+import { typeDefaultValue, contextProps } from "../types";
 
 const defaultValue = {
-  indexAndButton: {
-    index: 0 - 1,
-    nameButton: ""
-  }, 
-  setIndexAndButton: () => {},
+  namesButton: [],
+  setNamesButton: () => {},
 }
 
 
 export const MyContext = createContext<typeDefaultValue>(defaultValue);
 
 export const ContextProvider: FC<contextProps> = ({ children }) => {
-  const [indexAndButton, setIndexAndButton] = useState<indexAndButton>(defaultValue.indexAndButton);
+  const [namesButton, setNamesButton] = useState<string[]>(defaultValue.namesButton);
   
   
   return (
     <MyContext.Provider value={{
-      indexAndButton,
-      setIndexAndButton,
+      namesButton,
+      setNamesButton,
     }}>
       {children}
     </MyContext.Provider>

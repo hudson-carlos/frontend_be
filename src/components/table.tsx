@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { employees, erro } from "../types";
 import api from "../api";
 import Butons from "./ButtonsUpAndDown";
 import DataTable from "./dataTable";
+import { MyContext } from "../context/contextProvider";
 
 export default () => {
   const [data, setData] = useState<employees[] | erro[] | any[]>([]);
@@ -33,10 +34,10 @@ export default () => {
             <td className="mobile-off">{admission_date}</td>
             <td className="mobile-off">{phone}</td>
             <td className="mobile-only">
-              {<Butons />}
+              {<Butons indexTable={index}/>}
             </td>      
           </tr>
-          <DataTable job={job} phone={phone} admission_date={admission_date} />
+          <DataTable job={job} phone={phone} admission_date={admission_date} index={index} />
         </>
       )}
       </tbody>
