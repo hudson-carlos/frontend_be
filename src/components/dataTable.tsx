@@ -19,7 +19,7 @@ export default ({job, admission_date, phone, index}: props ) => {
           <td className={style.td} colSpan={3}>
             <div className={style.container}>
               <div className={style.data}>
-                <span>cargo</span> <span>{job}</span>  
+                <span>Cargo</span> <span>{job}</span>  
               </div>
             </div>
           </td>

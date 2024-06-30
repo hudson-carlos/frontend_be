@@ -10,7 +10,8 @@
   padding: 0 1rem 0 1rem;
   background: #FFFFFF;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: start;
   align-items: center;
   width: 250px;
   height: 46px;
@@ -24,13 +25,15 @@ input {
   outline: none;
   background: #FFFFFF;
   height: 44px;
-  width: 250px;
+  width: 90%;
 }
 
 .search div img {
+  /* border: solid 1px black; */
+  cursor: pointer;
   background: #FFFFFF;
-  height: 24px;
-  width: 24px;
+  height: 40px;
+  width: 40px;
 }
 
 .outlined {
@@ -46,8 +49,14 @@ input {
     flex-direction: column;
     align-items: start; 
   }
+  
+  input {
+    width: 80%;
+    margin-left: 1rem;
+  }
 
   .container {
-    width: 90%;
+    width: 100%;
+    padding: 0;
   }
 }
