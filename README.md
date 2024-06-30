@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# Teste Técnico Front-end 
+  Projeto solicitado pela Be Academy(https://beacademy.substack.com).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sobre o Projeto:
+  Este projeto é uma aplicação web  de registros de funcionários que ajuda os usuários a visualizar os dados de funcionários de maneira eficiente.
+  O objetivo do projeto é fornecer uma ferramenta simples e intuitiva para armazenção de dados de fucionários, permitindo que os usuários vizualize e faça buscas.
 
-## Available Scripts
+## Tecnologias Usadas
+- **Linguagens de Programação**: TypeScript, HTML, CSS
+- **Bibliotecas**: React.js
 
-In the project directory, you can run:
+## Estrutura do Projeto
+- **src/**: Contém o código-fonte da aplicação.
+  - **components/**: Componentes React reutilizáveis.
+  - **componentsCss/**: Compontes module CSS.
+  - **context/**: Estado global travéz de hooks.
+  - **icons/**: Imagens png usadas no projetos.
+  - **api/**: Interção com api e manipulaão de dados.
+  - **types.ts/**: interfaces reutilizáveis.
 
-### `npm start`
+## Acesso aos dados da API simulada
+  Para ter acesso aos dados que alimentarão o projeto, faça o seguinte:
+1. caso você não tenha, instale o pacote json-server;
+2. clone este repositório do GitHub em sua máquina: https://github.com/BeMobile/desafio-front-end;
+3. entre na pasta do projeto, em sua máquina, e, por meio da linha de comando, execute o comando json-server --watch db.json, para consumir a API simulada;
+ É necessário deixar o json-server rodando no terminal para que os dados sejam visualizados no projeto.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Pré-requisitos
+  Antes de começar, certifique-se de atender aos seguintes requisitos:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Softwares e Ferramentas Necessárias
 
-### `npm test`
+- **Sistema Operacional**: Este projeto foi testado Ubuntu 20.04.
+- **Node.js**: Versão 14.x ou superior. [Download Node.js](https://nodejs.org/)
+- **Yarn**: Versão 1.22.22 ou superior. [Download Yarn](https://yarnpkg.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Instalação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone o repositório:
+   git clone git@github.com:hudson-carlos/frontend_be.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Navegue até o diretório do projeto:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   cd frontend_be
+   
+3. Instale as dependências:
 
-### `npm run eject`
+   yarn install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Uso: 
+   yarn start
