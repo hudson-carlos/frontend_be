@@ -25,5 +25,11 @@ export interface contextProps {
 
 export interface typeDefaultValue {
   namesButton: string[]; 
-  setNamesButton: Dispatch<SetStateAction<string[]>>;  
+  setNamesButton: Dispatch<SetStateAction<string[]>>;
+  search: string;
+  setSearch: Dispatch<SetStateAction<string>>;
+  data: employees[] | erro[] | any[]; 
+  setData: Dispatch<SetStateAction<employees[] | erro[] | any[]>>;
+  dataFilter: employees[] | erro[] | any[]; 
+  setDataFilter: Dispatch<SetStateAction<employees[] | erro[] | any[]>>;
 }

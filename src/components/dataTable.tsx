@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { MyContext } from "../context/contextProvider";
+import style from "../componetsCss/dataTable.module.css"
 
 interface props {
   job: string;
@@ -14,17 +15,32 @@ export default ({job, admission_date, phone, index}: props ) => {
   if(namesButton.includes(`down${index}`)) {
     return (
       <>
-        <tr>
-          <td>Cargo</td>
-          <td colSpan={2}>{job}</td>
+        <tr className={style.tr}>
+          <td className={style.td} colSpan={3}>
+            <div className={style.container}>
+              <div className={style.data}>
+                <span>cargo</span> <span>{job}</span>  
+              </div>
+            </div>
+          </td>
         </tr>
-        <tr>
-          <td>Data de admissão</td>
-          <td colSpan={2}>{admission_date}</td>
+        <tr className={style.tr}>
+        <td className={style.td} colSpan={3}>
+          <div className={style.container}>
+              <div className={style.data}>
+                <span>Data de admissão</span> <span>{admission_date}</span>  
+              </div>
+          </div>
+          </td>
         </tr>
-        <tr>
-          <td>Telefone</td>
-          <td colSpan={2}>{phone}</td>
+        <tr className={style.tr}>
+        <td className={style.td} colSpan={3}>
+          <div className={`${style.container} ${style.trLast}`}>
+              <div className={style.data}>
+                <span>Telefone</span> <span>{phone}</span>  
+              </div>
+          </div>
+          </td>
         </tr>
       </>
     );

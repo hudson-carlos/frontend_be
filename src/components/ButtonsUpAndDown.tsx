@@ -22,15 +22,13 @@ export default ({indexTable}: props) => {
     />
   );
   return (
-    <td>
-      <img
-        src={up} 
-        alt="botton up"
-        onClick={() => {
-          setVisibleButton(true);
-          setNamesButton((oldValue) => oldValue.filter(name => name !== `down${indexTable}`));
-        }} 
-      />
-    </td>
+    <img
+      src={up} 
+      alt="botton up"
+      onClick={() => {
+        setVisibleButton(true);
+        setNamesButton((oldValue) => oldValue.filter(name => name !== `down${indexTable}`));
+      }} 
+    />
   );
 }

@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Table from './components/table';
 import Search from './components/search';
 import Header from './components/header';
-import { ContextProvider } from "./context/contextProvider";
+import { MyContext } from "./context/contextProvider";
 import './App.css';
+import api from './api';
 
-function App() { 
+function App() {
+  const { setData, data } = useContext(MyContext);
+
+  useEffect(() => {
+    api().then((res) => { setData(res) });
+  }, []);
+
+  if (data.length === 0) return <h1>Erro na Requisição</h1>
+
   return (
-    <ContextProvider>
-      <div className="App">
-        <Header />
-        <Search />
-        <Table />
-      </div>
-    </ContextProvider>
+    <div className="App">
+      <Header />
+      <Search />
+      <Table />
+    </div>
   );
 }
 

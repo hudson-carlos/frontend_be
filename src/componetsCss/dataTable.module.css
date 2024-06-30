@@ -1,0 +1,36 @@
+.tr {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .tr {
+        display: table-row;
+    }
+
+    .data {
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center; 
+        height: 50px;
+    }
+
+    .data span:first-child {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .data span:nth-child(2) {
+        font-size: 16px;
+    }
+
+    .trLast {
+        margin-bottom: 30px;
+    }
+}
